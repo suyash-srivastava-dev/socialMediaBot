@@ -1,0 +1,25 @@
+{
+  "name": "socialmediabot",
+  "version": "1.0.0",
+  "description": "shares insta reels to youtube",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "instagram",
+    "youtube",
+    "odysee"
+  ],
+  "author": "suyash-srivastava-dev",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "chai": "^4.3.4",
+    "fluent-ffmpeg": "^2.1.2",
+    "puppeteer": "^13.0.1",
+    "puppeteer-extra": "^3.2.3",
+    "puppeteer-extra-plugin-stealth": "^2.9.0",
+    "underscore": "^1.13.2"
+  }
+}
