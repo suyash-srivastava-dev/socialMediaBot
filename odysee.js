@@ -6,8 +6,8 @@ let count = 0;
 puppeteer.use(StealthPlugin());
 const Base_URL = "https://odysee.com/$/signin";
 const Upload_URL = "https://odysee.com/$/upload";
-const Surf_URL = "https://odysee.com/@GoodStuff:d/theBest:04";
-const tag = "instagram,reel,shorts,tik tok";
+const Surf_URL = "https://odysee.com/userName";
+const tag = "multiple tags, can , be placed";
 const Downloader = require("./downloadsrc");
 const odysee = {
   browser: null,
@@ -57,7 +57,7 @@ const odysee = {
     // title
     await odysee.page.type(
       "#content_title",
-      title + " : " + count + " | " + d + "🥵",
+      title + " : " + count + " | " + d ,
       {
         delay: 50,
       }
@@ -77,7 +77,7 @@ const odysee = {
     await odysee.page.waitFor(2000);
     await odysee.page.type(
       "#content_thumbnail",
-      "https://i.ytimg.com/vi/waPV3Xsoyq4/maxresdefault.jpg",
+      "jpg path",
       {
         delay: 50,
       }
