@@ -55,7 +55,7 @@ const credentials = require("./loginCredentials");
     console.log("iteration:" + count);
     let filename = getMostRecentFileName(dir);
     console.log(filename);
-    await yt.upload("#shorts #igyt best Reels,Tiktok", dir + "/" + filename);
+    await yt.upload("Your Video Title", dir + "/" + filename);
     removeFile(dir + "/" + filename);
     console.log("deleted file: " + dir + "/" + filename);
     count--;
@@ -81,7 +81,7 @@ const credentials = require("./loginCredentials");
   let filename = getMostRecentFileName(dir);
   console.log(filename);
   await od.upload(
-    "#tiktok #reel Top reels dump everyday",
+    "title of video",
     dir + "/" + filename
   );
 
@@ -92,11 +92,6 @@ const credentials = require("./loginCredentials");
   }
 
   await ig.closeBrowser();
-  //*/
-  // await yt.upload("dhanashree9");
-  // debugger;
-  //odysee surf
-  /*
   await od.initialize();
   await od.login(credentials.odId, credentials.odPass);
   await od.surf();
