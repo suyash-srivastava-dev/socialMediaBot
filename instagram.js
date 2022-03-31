@@ -5,10 +5,7 @@ const StealthPlugin = require("puppeteer-extra-plugin-stealth");
 puppeteer.use(StealthPlugin());
 
 const Base_URL = "https://instagram.com";
-const Saved_URL =
-  // "https://www.instagram.com/amansharmayo/saved/shorts/17931055504900648";
-  "https://www.instagram.com/amansharmayo/saved/all-posts";
-// const Downloader_URL = "https://instafinsta.com/";
+const Saved_URL =""
 const Downloader = require("./downloadsrc");
 const instagram = {
   browser: null,
@@ -137,60 +134,6 @@ const instagram = {
     await instagram.page.waitFor(5000);
     await instagram.page.waitFor(5000);
   },
-
-  // fromSaved: async () => {
-  //   await instagram.page.goto(Saved_URL, { waitUntil: "networkidle2" });
-  //   await instagram.page.waitFor(5000);
-  //   let p = 0;
-  //   let indexRow = 0;
-  //   //complete saved
-  //   //#react-root > section > main > div > div > div.qF0y9.Igw0E.IwRSH.eGOV_._4EzTm > article > div > div
-  //   do {
-  //     indexRow++;
-  //     try {
-  //       //selects 1st row only: nth-child(1) update 1 to other number for different row
-  //       let posts = await instagram.page.$$(
-  //         // "#react-root > section > main > div > div > div > div > div > div:nth-child(" +
-  //         //   index +
-  //         //   ")>div>div>a"
-  //         "#react-root > section > main > div > div > div> article > div > div > div:nth-child(" +
-  //           indexRow +
-  //           ")"
-  //       );
-
-  //       for (let i = 0; i < 3; i++) {
-  //         let post = posts[i];
-  //         // console.log(posts);
-  //         await post.click();
-  //         await instagram.page.waitFor(5000);
-  //         console.log("indexRow :" + indexRow + " i: " + i);
-  //         const imgs = await instagram.page.$eval(
-  //           "body > div> div > div > article > div > div > div > div > div:nth-child(1) > div > div > video[src]",
-  //           (img) => img.getAttribute("src")
-  //         );
-
-  //         console.log(imgs);
-  //         await instagram.page.waitFor(1000);
-
-  //         //download video/image file
-  //         await Downloader.downloadFile(imgs, "./videos", "user");
-
-  //         await instagram.page.waitFor(5000);
-
-  //         //close the insta post
-  //         await instagram.page.click("body > div > div > button");
-  //         // body > div._2dDPU.QPGbb.CkGkG > div.qF0y9.Igw0E.IwRSH.eGOV_._4EzTm.BI4qX.qJPeX.fm1AK.TxciK.yiMZG > button
-  //         await instagram.page.waitFor(5000);
-
-  //         //
-  //       }
-  //     }
-  //     catch (error) {
-  //       p = 1;
-  //       console.log(error + " p set to:" + p);
-  //     }
-  //   } while (p == 0);
-  // },
 
   fromSaved: async (from, to) => {
     await instagram.page.goto(Saved_URL, {
